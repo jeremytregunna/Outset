@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		4E4FD94C1821D87D0064EA07 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4FD94B1821D87D0064EA07 /* Cocoa.framework */; };
 		4E4FD9561821D87D0064EA07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E4FD9541821D87D0064EA07 /* InfoPlist.strings */; };
-		4E4FD95A1821D87D0064EA07 /* Outset.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FD9591821D87D0064EA07 /* Outset.m */; };
 		4E4FD9611821D87D0064EA07 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4FD9601821D87D0064EA07 /* XCTest.framework */; };
 		4E4FD9621821D87D0064EA07 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4FD94B1821D87D0064EA07 /* Cocoa.framework */; };
 		4E4FD9651821D87D0064EA07 /* Outset.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4FD9481821D87D0064EA07 /* Outset.framework */; };
 		4E4FD96B1821D87D0064EA07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E4FD9691821D87D0064EA07 /* InfoPlist.strings */; };
-		4E4FD96D1821D87D0064EA07 /* OutsetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FD96C1821D87D0064EA07 /* OutsetTests.m */; };
+		4E4FD9781821D89E0064EA07 /* OutsetNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4FD9761821D89E0064EA07 /* OutsetNode.h */; };
+		4E4FD9791821D89E0064EA07 /* OutsetNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FD9771821D89E0064EA07 /* OutsetNode.m */; };
+		4E4FD97C1821DFEE0064EA07 /* OutsetFingerTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4FD97A1821DFEE0064EA07 /* OutsetFingerTable.h */; };
+		4E4FD97D1821DFEE0064EA07 /* OutsetFingerTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FD97B1821DFEE0064EA07 /* OutsetFingerTable.m */; };
+		4EEFDF9E1822D93C0075D9A5 /* OutsetNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFDF9D1822D93C0075D9A5 /* OutsetNodeTests.m */; };
+		4EEFDFA01822D9550075D9A5 /* OutsetFingerTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFDF9F1822D9550075D9A5 /* OutsetFingerTableTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +41,16 @@
 		4E4FD9551821D87D0064EA07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4E4FD9571821D87D0064EA07 /* Outset-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Outset-Prefix.pch"; sourceTree = "<group>"; };
 		4E4FD9581821D87D0064EA07 /* Outset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Outset.h; sourceTree = "<group>"; };
-		4E4FD9591821D87D0064EA07 /* Outset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Outset.m; sourceTree = "<group>"; };
 		4E4FD95F1821D87D0064EA07 /* OutsetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutsetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4FD9601821D87D0064EA07 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4E4FD9681821D87D0064EA07 /* OutsetTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OutsetTests-Info.plist"; sourceTree = "<group>"; };
 		4E4FD96A1821D87D0064EA07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4E4FD96C1821D87D0064EA07 /* OutsetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OutsetTests.m; sourceTree = "<group>"; };
+		4E4FD9761821D89E0064EA07 /* OutsetNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutsetNode.h; sourceTree = "<group>"; };
+		4E4FD9771821D89E0064EA07 /* OutsetNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutsetNode.m; sourceTree = "<group>"; };
+		4E4FD97A1821DFEE0064EA07 /* OutsetFingerTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutsetFingerTable.h; sourceTree = "<group>"; };
+		4E4FD97B1821DFEE0064EA07 /* OutsetFingerTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutsetFingerTable.m; sourceTree = "<group>"; };
+		4EEFDF9D1822D93C0075D9A5 /* OutsetNodeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutsetNodeTests.m; sourceTree = "<group>"; };
+		4EEFDF9F1822D9550075D9A5 /* OutsetFingerTableTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutsetFingerTableTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +117,11 @@
 		4E4FD9511821D87D0064EA07 /* Outset */ = {
 			isa = PBXGroup;
 			children = (
+				4E4FD9761821D89E0064EA07 /* OutsetNode.h */,
+				4E4FD9771821D89E0064EA07 /* OutsetNode.m */,
 				4E4FD9581821D87D0064EA07 /* Outset.h */,
-				4E4FD9591821D87D0064EA07 /* Outset.m */,
+				4E4FD97A1821DFEE0064EA07 /* OutsetFingerTable.h */,
+				4E4FD97B1821DFEE0064EA07 /* OutsetFingerTable.m */,
 				4E4FD9521821D87D0064EA07 /* Supporting Files */,
 			);
 			path = Outset;
@@ -129,7 +140,8 @@
 		4E4FD9661821D87D0064EA07 /* OutsetTests */ = {
 			isa = PBXGroup;
 			children = (
-				4E4FD96C1821D87D0064EA07 /* OutsetTests.m */,
+				4EEFDF9D1822D93C0075D9A5 /* OutsetNodeTests.m */,
+				4EEFDF9F1822D9550075D9A5 /* OutsetFingerTableTests.m */,
 				4E4FD9671821D87D0064EA07 /* Supporting Files */,
 			);
 			path = OutsetTests;
@@ -151,6 +163,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E4FD97C1821DFEE0064EA07 /* OutsetFingerTable.h in Headers */,
+				4E4FD9781821D89E0064EA07 /* OutsetNode.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +213,7 @@
 		4E4FD93F1821D87D0064EA07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = Outset;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Jeremy Tregunna";
 				TargetAttributes = {
@@ -249,7 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E4FD95A1821D87D0064EA07 /* Outset.m in Sources */,
+				4E4FD9791821D89E0064EA07 /* OutsetNode.m in Sources */,
+				4E4FD97D1821DFEE0064EA07 /* OutsetFingerTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E4FD96D1821D87D0064EA07 /* OutsetTests.m in Sources */,
+				4EEFDFA01822D9550075D9A5 /* OutsetFingerTableTests.m in Sources */,
+				4EEFDF9E1822D93C0075D9A5 /* OutsetNodeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +465,7 @@
 				4E4FD9721821D87D0064EA07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E4FD9731821D87D0064EA07 /* Build configuration list for PBXNativeTarget "OutsetTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +474,7 @@
 				4E4FD9751821D87D0064EA07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
