@@ -114,4 +114,18 @@
     XCTAssertEqualObjects([second objectForKey:@"forty-two"], @42, @"Must return the proper value from a really remote object");
 }
 
+- (void)testRetrievingMultipleValues
+{
+    OutsetNode* second = [[OutsetNode alloc] initWithID:2];
+    OutsetNode* third  = [[OutsetNode alloc] initWithID:3];
+    [second joinAfterNode:self.bootstrap];
+    [third joinAfterNode:second];
+
+    [second setObject:@42 forKey:@"forty-two"];
+    [third setObject:@23 forKey:@"twenty-three"];
+
+    XCTAssertEqualObjects([self.bootstrap objectForKey:@"forty-two"], @42, @"Must retrieve the proper value for key forty-two");
+    XCTAssertEqualObjects([self.bootstrap objectForKey:@"twenty-three"], @23, @"Must retrieve the proper value for key twenty-three");
+}
+
 @end

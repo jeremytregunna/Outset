@@ -119,9 +119,7 @@ static inline NSUInteger OutsetHashForKey(NSString* key)
         self.next        = oldNext;
         self.previous    = previous;
         oldNext.previous = self;
-        [previous update];
-        [oldNext update];
-        [self update];
+        [@[previous, self, oldNext] makeObjectsPerformSelector:@selector(update)];
     }
 }
 
@@ -132,6 +130,7 @@ static inline NSUInteger OutsetHashForKey(NSString* key)
         OutsetNode* next = self.next;
         next.previous = self.previous;
         self.previous.next = next;
+        [@[next, self.previous] makeObjectsPerformSelector:@selector(update)];
     }
 }
 
