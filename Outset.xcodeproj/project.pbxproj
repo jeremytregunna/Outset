@@ -17,6 +17,9 @@
 		4E4FD9791821D89E0064EA07 /* OutsetNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FD9771821D89E0064EA07 /* OutsetNode.m */; };
 		4E4FD97C1821DFEE0064EA07 /* OutsetFingerTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4FD97A1821DFEE0064EA07 /* OutsetFingerTable.h */; };
 		4E4FD97D1821DFEE0064EA07 /* OutsetFingerTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FD97B1821DFEE0064EA07 /* OutsetFingerTable.m */; };
+		4ED5CD07182476150089B6A9 /* OutsetMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ED5CD05182476150089B6A9 /* OutsetMessage.h */; };
+		4ED5CD08182476150089B6A9 /* OutsetMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED5CD06182476150089B6A9 /* OutsetMessage.m */; };
+		4ED5CD0A182478920089B6A9 /* OutsetMessageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED5CD09182478920089B6A9 /* OutsetMessageTests.m */; };
 		4EEFDF9E1822D93C0075D9A5 /* OutsetNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFDF9D1822D93C0075D9A5 /* OutsetNodeTests.m */; };
 		4EEFDFA01822D9550075D9A5 /* OutsetFingerTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFDF9F1822D9550075D9A5 /* OutsetFingerTableTests.m */; };
 /* End PBXBuildFile section */
@@ -49,6 +52,9 @@
 		4E4FD9771821D89E0064EA07 /* OutsetNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutsetNode.m; sourceTree = "<group>"; };
 		4E4FD97A1821DFEE0064EA07 /* OutsetFingerTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutsetFingerTable.h; sourceTree = "<group>"; };
 		4E4FD97B1821DFEE0064EA07 /* OutsetFingerTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutsetFingerTable.m; sourceTree = "<group>"; };
+		4ED5CD05182476150089B6A9 /* OutsetMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutsetMessage.h; sourceTree = "<group>"; };
+		4ED5CD06182476150089B6A9 /* OutsetMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutsetMessage.m; sourceTree = "<group>"; };
+		4ED5CD09182478920089B6A9 /* OutsetMessageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutsetMessageTests.m; sourceTree = "<group>"; };
 		4EEFDF9D1822D93C0075D9A5 /* OutsetNodeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutsetNodeTests.m; sourceTree = "<group>"; };
 		4EEFDF9F1822D9550075D9A5 /* OutsetFingerTableTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutsetFingerTableTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +123,7 @@
 		4E4FD9511821D87D0064EA07 /* Outset */ = {
 			isa = PBXGroup;
 			children = (
+				4ED5CD03182475F40089B6A9 /* Protocol */,
 				4ED5CD01182475A50089B6A9 /* DHT */,
 				4E4FD9521821D87D0064EA07 /* Supporting Files */,
 			);
@@ -136,6 +143,7 @@
 		4E4FD9661821D87D0064EA07 /* OutsetTests */ = {
 			isa = PBXGroup;
 			children = (
+				4ED5CD04182475F80089B6A9 /* Protocol */,
 				4ED5CD02182475AF0089B6A9 /* DHT */,
 				4E4FD9671821D87D0064EA07 /* Supporting Files */,
 			);
@@ -172,6 +180,23 @@
 			name = DHT;
 			sourceTree = "<group>";
 		};
+		4ED5CD03182475F40089B6A9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				4ED5CD05182476150089B6A9 /* OutsetMessage.h */,
+				4ED5CD06182476150089B6A9 /* OutsetMessage.m */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		4ED5CD04182475F80089B6A9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				4ED5CD09182478920089B6A9 /* OutsetMessageTests.m */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -179,6 +204,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ED5CD07182476150089B6A9 /* OutsetMessage.h in Headers */,
 				4E4FD97C1821DFEE0064EA07 /* OutsetFingerTable.h in Headers */,
 				4E4FD9781821D89E0064EA07 /* OutsetNode.h in Headers */,
 			);
@@ -280,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ED5CD08182476150089B6A9 /* OutsetMessage.m in Sources */,
 				4E4FD9791821D89E0064EA07 /* OutsetNode.m in Sources */,
 				4E4FD97D1821DFEE0064EA07 /* OutsetFingerTable.m in Sources */,
 			);
@@ -291,6 +318,7 @@
 			files = (
 				4EEFDFA01822D9550075D9A5 /* OutsetFingerTableTests.m in Sources */,
 				4EEFDF9E1822D93C0075D9A5 /* OutsetNodeTests.m in Sources */,
+				4ED5CD0A182478920089B6A9 /* OutsetMessageTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
