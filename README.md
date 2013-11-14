@@ -2,10 +2,16 @@
 
 Outset is an implementation of a distributed hash table, which resembles Chord. It was built as a lookup service for an audio chat application.
 
-## Requirements
+This library does not provide a network communication mechanism, nor a protocol to talk over, it merely provides the distributed hash table itself, as to remain most useful. It is your responsibility to use the DHT in a way that meets your applications needs.
+
+## Deployment
 
 * OSX 10.8 or higher for Mac apps
 * iOS 6.0 or higher for iOS apps
+
+You can use cocoapods too if you want, by adding something like this to your Podfile:
+
+    pod 'Outset', :git => 'https://github.com/jeremytregunna/Outset'
 
 ## License
 
