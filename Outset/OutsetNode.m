@@ -8,6 +8,7 @@
 
 #import "OutsetNode.h"
 #import "OutsetFingerTable.h"
+#include <arpa/inet.h>
 
 // Must be a power of 2.
 static NSUInteger OutsetFingerTableSpaceSize = 4;
@@ -30,6 +31,19 @@ static inline NSUInteger OutsetHashForKey(NSString* key)
 @end
 
 @implementation OutsetNode
+
+- (instancetype)initWithIPAddress:(NSString*)addressString
+{
+    if(![addressString isKindOfClass:[NSString class]] || [addressString length] == 0)
+        return nil;
+
+    uint32_t ip = 0;
+    inet_pton(AF_INET, [addressString UTF8String], &ip);
+    ip = ntohl(ip);
+
+    // ip ^ 0 == ip; and this is our hash function.
+    return [self initWithID:ip];
+}
 
 - (instancetype)initWithID:(OutsetNodeID)identifier
 {
@@ -89,7 +103,6 @@ static inline NSUInteger OutsetHashForKey(NSString* key)
 - (void)setObject:(id<NSCoding>)object forKey:(NSString*)key
 {
     OutsetNode* node = [self nodeForKey:key];
-    self.storage[key] = object;
     node.storage[key] = object;
 }
 

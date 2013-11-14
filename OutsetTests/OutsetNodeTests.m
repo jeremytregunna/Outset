@@ -30,6 +30,12 @@
     self.bootstrap = [[OutsetNode alloc] initWithID:1];
 }
 
+- (void)testCreatingByIPAddress
+{
+    OutsetNode* node = [[OutsetNode alloc] initWithIPAddress:@"10.0.1.5"];
+    XCTAssertEqual(node.identifier, (OutsetNodeID)167772421, @"IP address when hashed must produce a valid identifier");
+}
+
 - (void)testBootstrapNextIsItselfWhenCreatedWithoutAnExplicitNextNode
 {
     XCTAssertNotNil(self.bootstrap, @"Must be able to create a node with not linked to anything.");

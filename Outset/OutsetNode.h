@@ -14,6 +14,7 @@ typedef uint32_t OutsetNodeID;
 @property (nonatomic) OutsetNodeID identifier;
 
 - (id)init NS_UNAVAILABLE;
+- (instancetype)initWithIPAddress:(NSString*)addressString;
 - (instancetype)initWithID:(OutsetNodeID)identifier;
 
 - (id<NSCoding>)objectForKey:(NSString*)key;
