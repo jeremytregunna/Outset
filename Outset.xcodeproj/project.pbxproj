@@ -22,6 +22,10 @@
 		4ED5CD0A182478920089B6A9 /* OutsetMessageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED5CD09182478920089B6A9 /* OutsetMessageTests.m */; };
 		4EEFDF9E1822D93C0075D9A5 /* OutsetNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFDF9D1822D93C0075D9A5 /* OutsetNodeTests.m */; };
 		4EEFDFA01822D9550075D9A5 /* OutsetFingerTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFDF9F1822D9550075D9A5 /* OutsetFingerTableTests.m */; };
+		4EEFE3F91834FB0C00C3F099 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EEFE3F81834FB0C00C3F099 /* Foundation.framework */; };
+		4EEFE41B1834FB4000C3F099 /* OutsetMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED5CD06182476150089B6A9 /* OutsetMessage.m */; };
+		4EEFE41C1834FB4000C3F099 /* OutsetNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FD9771821D89E0064EA07 /* OutsetNode.m */; };
+		4EEFE41D1834FB4000C3F099 /* OutsetFingerTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FD97B1821DFEE0064EA07 /* OutsetFingerTable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,18 @@
 			remoteInfo = Outset;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4EEFE3F51834FB0C00C3F099 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4E4FD9481821D87D0064EA07 /* Outset.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Outset.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +73,9 @@
 		4ED5CD09182478920089B6A9 /* OutsetMessageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutsetMessageTests.m; sourceTree = "<group>"; };
 		4EEFDF9D1822D93C0075D9A5 /* OutsetNodeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutsetNodeTests.m; sourceTree = "<group>"; };
 		4EEFDF9F1822D9550075D9A5 /* OutsetFingerTableTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutsetFingerTableTests.m; sourceTree = "<group>"; };
+		4EEFE3F71834FB0C00C3F099 /* libliboutset.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libliboutset.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EEFE3F81834FB0C00C3F099 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4EEFE4081834FB0D00C3F099 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +97,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EEFE3F41834FB0C00C3F099 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EEFE3F91834FB0C00C3F099 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -86,6 +113,7 @@
 			children = (
 				4E4FD9511821D87D0064EA07 /* Outset */,
 				4E4FD9661821D87D0064EA07 /* OutsetTests */,
+				4EEFE3FA1834FB0C00C3F099 /* liboutset */,
 				4E4FD94A1821D87D0064EA07 /* Frameworks */,
 				4E4FD9491821D87D0064EA07 /* Products */,
 			);
@@ -96,6 +124,7 @@
 			children = (
 				4E4FD9481821D87D0064EA07 /* Outset.framework */,
 				4E4FD95F1821D87D0064EA07 /* OutsetTests.xctest */,
+				4EEFE3F71834FB0C00C3F099 /* libliboutset.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +134,8 @@
 			children = (
 				4E4FD94B1821D87D0064EA07 /* Cocoa.framework */,
 				4E4FD9601821D87D0064EA07 /* XCTest.framework */,
+				4EEFE3F81834FB0C00C3F099 /* Foundation.framework */,
+				4EEFE4081834FB0D00C3F099 /* UIKit.framework */,
 				4E4FD94D1821D87D0064EA07 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -197,6 +228,21 @@
 			name = Protocol;
 			sourceTree = "<group>";
 		};
+		4EEFE3FA1834FB0C00C3F099 /* liboutset */ = {
+			isa = PBXGroup;
+			children = (
+				4EEFE3FB1834FB0C00C3F099 /* Supporting Files */,
+			);
+			path = liboutset;
+			sourceTree = "<group>";
+		};
+		4EEFE3FB1834FB0C00C3F099 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -249,6 +295,23 @@
 			productReference = 4E4FD95F1821D87D0064EA07 /* OutsetTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4EEFE3F61834FB0C00C3F099 /* liboutset */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EEFE4191834FB0D00C3F099 /* Build configuration list for PBXNativeTarget "liboutset" */;
+			buildPhases = (
+				4EEFE3F31834FB0C00C3F099 /* Sources */,
+				4EEFE3F41834FB0C00C3F099 /* Frameworks */,
+				4EEFE3F51834FB0C00C3F099 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = liboutset;
+			productName = liboutset;
+			productReference = 4EEFE3F71834FB0C00C3F099 /* libliboutset.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -278,6 +341,7 @@
 			targets = (
 				4E4FD9471821D87D0064EA07 /* Outset */,
 				4E4FD95E1821D87D0064EA07 /* OutsetTests */,
+				4EEFE3F61834FB0C00C3F099 /* liboutset */,
 			);
 		};
 /* End PBXProject section */
@@ -319,6 +383,16 @@
 				4EEFDFA01822D9550075D9A5 /* OutsetFingerTableTests.m in Sources */,
 				4EEFDF9E1822D93C0075D9A5 /* OutsetNodeTests.m in Sources */,
 				4ED5CD0A182478920089B6A9 /* OutsetMessageTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EEFE3F31834FB0C00C3F099 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EEFE41B1834FB4000C3F099 /* OutsetMessage.m in Sources */,
+				4EEFE41C1834FB4000C3F099 /* OutsetNode.m in Sources */,
+				4EEFE41D1834FB4000C3F099 /* OutsetFingerTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -415,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -490,6 +564,43 @@
 			};
 			name = Release;
 		};
+		4EEFE4151834FB0D00C3F099 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				DSTROOT = /tmp/liboutset.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Outset/Outset-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4EEFE4161834FB0D00C3F099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				DSTROOT = /tmp/liboutset.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Outset/Outset-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -519,6 +630,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4EEFE4191834FB0D00C3F099 /* Build configuration list for PBXNativeTarget "liboutset" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EEFE4151834FB0D00C3F099 /* Debug */,
+				4EEFE4161834FB0D00C3F099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
